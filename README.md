@@ -16,7 +16,7 @@ You can easily use Cytosm as a library in your code (think of it as a simple map
 
 ## Overview
 
-A Cypher string goes into several transformations in it journey through Cytosm:
+A Cypher string goes into several transformations in its journey through Cytosm:
 
 * Parsing: It is an auto-generated ANTLR parser based on OpenCypher EBNF grammar. It creates an AST to be used later on.
 * PathFinder: It navigates the AST, given a graph topology file (gTop), in order to make Cypher queries more concrete.
@@ -62,7 +62,7 @@ Cytosm queries have been run on a variety of backends, obtaining quite surprisin
 ## Known Issues
 
 - Directed relationships (see `PopulateJoins` pass for more information on the current status)
-- Arbitrary hops that could be defined in the gtop (similarly to the previous dot, more detail can be found in `PopulateJoins`)
+- Arbitrary hops that could be defined in the gTop (similarly to the previous dot, more detail can be found in `PopulateJoins`)
 - Proper handling of the `COUNT` function (we only support limited use cases)
 - `SKIP`, `LIMIT` and `ORDER BY` are not propagated appropriately on "wide" query - that is queries involving at least one UNION in the generated SQL.
 - Improve the type-checker to compute verify the correctness of any expressions before rendering.
